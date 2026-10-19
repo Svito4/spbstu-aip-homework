@@ -31,6 +31,6 @@ tidy:
 
 test: build
 	@echo "Running tests..."
-	@printf "2 3\n1 2 3\n4 5 6\n" | ./$(TARGET) > $(BUILD_DIR)/test_out.txt
-	@printf "1 4\n2 5\n3 6\n" | diff -u - $(BUILD_DIR)/test_out.txt
+	@printf "3 2\n1 2\n3 4\n5 6\n2 3\n7 8 9\n0 1 2\n" | ./$(TARGET) > $(BUILD_DIR)/test_out.txt
+	@printf "1 2 7 8 9\n3 4 0 1 2\n5 6\n" | diff -u - $(BUILD_DIR)/test_out.txt
 	@echo "All tests passed successfully!"
